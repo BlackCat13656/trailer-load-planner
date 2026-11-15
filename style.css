@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hero-font: "IBM Plex Sans", sans-serif;
+  --data-font: "IBM Plex Mono", monospace;
+  --headings-color: #0b3c5d;
+  --accents-color: #f2a900;
+  --background-color: #f3ede4;
+}
