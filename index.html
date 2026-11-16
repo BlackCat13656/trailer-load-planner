@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    \
 
     <meta
       name="description"
@@ -13,20 +12,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200h;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <link rel="stylesheet" href="style.css" />
 
     <title>Full Load Logistics Solutions</title>
-    <h1>Full Load Logistics Solutions</h1>
   </head>
   <body>
     <div class="container">
       <header>
-        <div><h1>Company Name</h1></div>
-        <nav>Navigation Bar</nav>
+        <div>
+          <h1 class="logo">
+            <i>FULLS</i><span>Full Load Logistics Solutions</span>
+          </h1>
+          <span class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" />
+          </span>
+        </div>
+        <nav aria-label="Main">
+          <ul>
+            <li class="header-nav-item"><a href="#">Shipping</a></li>
+            <li class="header-nav-item"><a href="#">Tracking</a></li>
+            <li class="header-nav-item"><a href="#">Services</a></li>
+            <li class="header-nav-item"><a href="#">Customer Service</a></li>
+            <li class="header-nav-item sign-up">
+              <a href="#">Sign Up / Customer Login</a>
+              <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main>
         <div>
@@ -39,7 +64,54 @@
         </div>
       </main>
       <footer>
-        <nav>Nav Bar of Terms of Use and Social Media Links</nav>
+        <nav aria-label="Footer">
+          <div class="about-us">
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Mission / Vision</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Merchandise Store</a></li>
+            </ul>
+          </div>
+
+          <div class="policy-center">
+            <h3>Policy Center</h3>
+            <ul>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Rights</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="social-media">
+            <ul>
+              <li>
+                <a href="#" aria-label="Facebook"
+                  ><i
+                    class="fa-brands fa-square-facebook"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Twitter"
+                  ><i
+                    class="fa-brands fa-square-x-twitter"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </footer>
     </div>
 
