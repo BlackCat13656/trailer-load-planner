@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200h;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
 
@@ -33,11 +33,12 @@
       <header>
         <div>
           <h1 class="logo">
-            <i>FULLS</i><span>Full Load Logistics Solutions</span>
+            <span>FULLS</span><span>Full Load Logistics Solutions</span>
           </h1>
           <span class="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <label for="search">Search</label>
+            <input type="text" id="search" placeholder="Search" />
           </span>
         </div>
         <nav aria-label="Main">
@@ -47,8 +48,10 @@
             <li class="header-nav-item"><a href="#">Services</a></li>
             <li class="header-nav-item"><a href="#">Customer Service</a></li>
             <li class="header-nav-item sign-up">
-              <a href="#">Sign Up / Customer Login</a>
-              <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+              <a href="#"
+                >Sign Up / Customer Login
+                <i class="fa-solid fa-user-plus" aria-hidden="true"></i
+              ></a>
             </li>
           </ul>
         </nav>
@@ -82,11 +85,11 @@
               <li><a href="#">Terms of Use</a></li>
               <li><a href="#">Privacy Rights</a></li>
               <li><a href="#">Security</a></li>
-              <li><a href="#">Press</a></li>
             </ul>
           </div>
 
           <div class="social-media">
+            <h3>Social Media</h3>
             <ul>
               <li>
                 <a href="#" aria-label="Facebook"
@@ -102,7 +105,7 @@
                 ></a>
               </li>
               <li>
-                <a href="#" aria-label="Twitter"
+                <a href="#" aria-label="X"
                   ><i
                     class="fa-brands fa-square-x-twitter"
                     aria-hidden="true"
@@ -112,6 +115,12 @@
             </ul>
           </div>
         </nav>
+        <div class="copyright">
+          <p>
+            Copyright © 1990-2026. Full Load Logistics Solutions, LLC. All
+            rights reserved.
+          </p>
+        </div>
       </footer>
     </div>
 
