@@ -34,20 +34,19 @@
         <!-- Header Top -->
         <div class="header-top">
           <h1 class="logo">
-            <a href="#"
-              ><span>FULLS</span><span>Full Load Logistics Solutions</span></a
-            >
+            <a href="#"><span>FULLS</span>Full Load Logistics Solutions</a>
           </h1>
           <span class="search">
-            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-            <label for="search">Search</label>
+            <button type="submit" class="search-button">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
             <input type="search" id="search" placeholder="Track a load" />
           </span>
         </div>
 
         <!-- Navigation Bar -->
         <nav aria-label="Main">
-          <ul>
+          <ul class="header-nav-bar">
             <li class="header-nav-item"><a href="#">Shipping</a></li>
             <li class="header-nav-item"><a href="#">Tracking</a></li>
             <li class="header-nav-item"><a href="#">Services</a></li>
@@ -126,9 +125,12 @@
             </div>
           </section>
         </div>
-        <!-- Drag and dro area -->
+        <!-- Drag and drop area -->
         <div class="drag-and-drop-area">
-          <section>Truck Box Area</section>
+          <section>
+            <div class="trailer-area"></div>
+            <div class="pallet-area"></div>
+          </section>
         </div>
       </main>
 
