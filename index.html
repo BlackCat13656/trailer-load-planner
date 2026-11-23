@@ -37,10 +37,15 @@
             <a href="#"><span>FULLS</span>Full Load Logistics Solutions</a>
           </h1>
           <span class="search">
-            <button type="submit" class="search-button">
+            <button type="submit" class="search-button" aria-label="Search">
               <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
             </button>
-            <input type="search" id="search" placeholder="Track a load" />
+            <input
+              type="search"
+              id="search"
+              placeholder="Track a load"
+              aria-label="Search or track a load"
+            />
           </span>
         </div>
 
@@ -63,88 +68,85 @@
 
       <main>
         <!-- Form area -->
-        <div class="form-area">
-          <section>
-            <h2>Plan Your Trailer Load</h2>
-            <form class="truck-size" action="">
-              <label for="truck-size">Choose a trailer size:</label>
-              <select name="truck-size" id="truck-size">
-                <option value="">--Please choose an option--</option>
-                <option value="53ft">53ft trailer</option>
-                <option value="48ft">48ft trailer</option>
-                <option value="28ft">28ft trailer</option>
-              </select>
-              <button type="submit">Generate Trailer</button>
+        <section class="form-area">
+          <h2>Plan Your Trailer Load</h2>
+          <form class="truck-size">
+            <label for="truck-size">Choose a trailer size:</label>
+            <select name="truck-size" id="truck-size" required>
+              <option value="">--Please choose an option--</option>
+              <option value="53ft">53ft trailer</option>
+              <option value="48ft">48ft trailer</option>
+              <option value="28ft">28ft trailer</option>
+            </select>
+            <button type="submit">Generate Trailer</button>
+          </form>
+
+          <div id="load-specs">
+            <h3>Add Pallet</h3>
+            <form id="pallet-form">
+              <label for="pallet-id">ID:</label>
+              <input
+                type="number"
+                id="pallet-id"
+                placeholder="e.g. 4521"
+                required
+              />
+              <label for="pallet-weight">Weight:</label>
+              <input
+                type="number"
+                id="pallet-weight"
+                placeholder="e.g. 105"
+                required
+              />
+              <label for="pallet-stop-number">Stop Number:</label>
+              <input
+                type="number"
+                id="pallet-stop-number"
+                placeholder="e.g. 3"
+                required
+              />
+              <button type="submit">Add Pallet</button>
             </form>
 
-            <div action="" id="load-specs">
-              <h3>Add Pallet</h3>
-              <form action="" id="pallet-form">
-                <label for="pallet-id">ID:</label>
-                <input
-                  type="number"
-                  id="pallet-id"
-                  placeholder="Input Pallet Id"
-                />
-                <label for="pallet-weight">Weight:</label>
-                <input
-                  type="number"
-                  id="pallet-weight"
-                  placeholder="Input Pallet Weight"
-                />
-                <label for="pallet-stop-number">Stop Number:</label>
-                <input
-                  type="number"
-                  id="pallet-stop-number"
-                  placeholder="Input Stop Number"
-                />
-                <button type="submit">Add Pallet</button>
-              </form>
+            <form id="quote">
+              <label for="type-of-service">Type of Service:</label>
+              <select name="type-of-service" id="type-of-service" required>
+                <option value="">--Please choose an option--</option>
+                <option value="standard">Standard: $2.50 per mile</option>
+                <option value="expedited">Expedited: $3.75 per mile</option>
+                <option value="guaranteed">Guaranteed: $4.50 per mile</option>
+                <option value="same-day">Same Day: $6.00 per mile</option>
+              </select>
+              <label for="distance">Distance:</label>
+              <input
+                type="number"
+                id="distance"
+                placeholder="Input Distance in Miles"
+                required
+              />
+              <button type="submit">Get Quote</button>
+            </form>
 
-              <form action="" id="quote">
-                <label for="type-of-service">Type of Service:</label>
-                <select name="type-of-service" id="type-of-service">
-                  <option value="">--Please choose an option--</option>
-                  <option value="standard">Standard: $2.50 per mile</option>
-                  <option value="expedited">Expedited: $3.75 per mile</option>
-                  <option value="guaranteed">Guaranteed: $4.50 per mile</option>
-                  <option value="same-day">Same Day: $6.00 per mile</option>
-                </select>
-                <label for="distance">Distance:</label>
-                <input
-                  type="text"
-                  id="distance"
-                  placeholder="Input Distance in Miles"
-                />
-                <button type="submit">Get Quote</button>
-              </form>
+            <p class="quote"></p>
+          </div>
+        </section>
 
-              <div>
-                <p class="quote"></p>
-              </div>
-            </div>
-          </section>
-        </div>
         <!-- Drag and drop area -->
-        <div class="drag-and-drop-area">
-          <section>
-            <div class="trailer-area"></div>
-            <div class="pallet-area"></div>
-          </section>
-        </div>
+        <section class="drag-and-drop-area">
+          <div class="trailer-area"></div>
+          <div class="pallet-area"></div>
+        </section>
       </main>
 
       <footer>
         <!-- Footer Navigation Bar -->
-        <nav aria-label="Footer">
+        <nav aria-label="Footer" class="footer-nav-bar">
           <div class="about-us">
             <h3>About Us</h3>
             <ul>
               <li><a href="#">History</a></li>
               <li><a href="#">Mission / Vision</a></li>
               <li><a href="#">Careers</a></li>
-              <li><a href="#">Press</a></li>
-              <li><a href="#">Merchandise Store</a></li>
             </ul>
           </div>
 

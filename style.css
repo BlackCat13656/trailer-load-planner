@@ -30,12 +30,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   font-size: 1.6rem;
-}
-
-header {
-  display: block;
 }
 
 .header-top {
@@ -43,7 +38,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 8rem;
+  min-height: 6rem;
   background-color: var(--accents-color);
 }
 
@@ -55,6 +50,7 @@ header {
 }
 
 .logo a span {
+  display: inline-block;
   font-size: 5rem;
   margin-right: 2rem;
   padding: 0 0 0 3rem;
@@ -62,13 +58,10 @@ header {
 }
 
 .logo a span:hover {
-  font-size: 5.1rem;
-  font-style: italic;
+  transform: scale(1.05);
 }
 
 .search {
-  position: relative;
-  top: 1rem;
   padding: 0 3rem 0 0;
 }
 
@@ -91,7 +84,7 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  height: 4rem;
+  min-height: 4rem;
   background-color: var(--headings-color);
 }
 
@@ -104,22 +97,76 @@ header {
   text-decoration: none;
 }
 
+.header-nav-item a {
+  display: inline-block;
+}
+
 .header-nav-item a:hover {
   color: var(--background-color);
-  font-size: 1.7rem;
+  transform: scale(1.05);
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+main {
+  flex: 1;
 }
 
-footer nav {
+.footer-nav-bar {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--accents-color);
+  border-top: 0.4rem solid var(--headings-color);
+  padding: 1rem 0;
+}
+
+.footer-nav-bar h3 {
+  font-size: 2rem;
+}
+
+.footer-nav-bar ul li {
+  display: flex;
+}
+
+.footer-nav-bar a {
+  color: var(--headings-color);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.about-us li a:hover,
+.policy-center li a:hover {
+  transform: scale(1.05);
+  font-weight: 500;
+}
+
+.social-media {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-media ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 2.6rem;
+}
+
+.social-media ul li:hover {
+  transform: scale(1.15);
+}
+
+.copyright {
+  width: 100%;
+  min-height: 3rem;
+  background-color: var(--headings-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accents-color);
+  font-size: 1.2rem;
 }
