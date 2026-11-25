@@ -1,6 +1,6 @@
 // global variables
 const trailerForm = document.querySelector(".truck-size");
-const trailerSelect = document.querySelector("#truck-size");
+const trailerSelected = document.querySelector("#truck-size");
 const trailerSlots = document.querySelector(".trailer-slots");
 
 const trailers = {
@@ -13,7 +13,7 @@ const trailers = {
 function makeTrailer(e) {
   e.preventDefault();
 
-  const trailerSpecs = trailers[trailerSelect.value];
+  const trailerSpecs = trailers[trailerSelected.value];
   if (!trailerSpecs) return;
 
   // clears trailer area
