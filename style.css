@@ -177,6 +177,27 @@ button:hover {
   grid-template-columns: 1fr 1fr;
 }
 
+.pallet-area {
+  display: grid;
+}
+
+.trailer-area {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.trailer-slots {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.slot {
+  min-height: 6rem;
+  border: 1px solid var(--headings-color);
+  border-radius: 0.4rem;
+  background-color: var(--background-color);
+}
+
 .footer-nav-bar {
   width: 100%;
   display: flex;
