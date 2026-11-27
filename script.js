@@ -28,6 +28,17 @@ function makeTrailer(e) {
     slot.classList.add("slot");
     slot.dataset.index = i;
     trailerSlots.appendChild(slot);
+
+    slot.addEventListener("dragover", (e) => {
+      e.preventDefault();
+    });
+
+    slot.addEventListener("drop", (e) => {
+      e.preventDefault();
+      const id = e.dataTransfer.getData("text/plain");
+      const pallet = document.getElementById(id);
+      slot.appendChild(pallet);
+    });
   }
   trailerSlots.style.gridTemplateColumns = `repeat(${trailerSpecs.columns}, 1fr)`;
 }
@@ -35,13 +46,20 @@ function makeTrailer(e) {
 function makePallet(e) {
   e.preventDefault();
 
+  // counter for number of pallet generated
   counter++;
 
+  // pallet information
   const palletSpecs = Object.fromEntries(new FormData(e.target));
 
   const div = document.createElement("div");
   div.textContent = `PLT: ${counter}\n#${palletSpecs.id}\n${palletSpecs.weight} kg\nStop ${palletSpecs.stop}`;
   div.classList.add("pallet");
+  div.id = `pallet-${counter}`;
+  div.setAttribute("draggable", "true");
+  div.addEventListener("dragstart", (e) => {
+    e.dataTransfer.setData("text/plain", e.target.id);
+  });
   palletArea.appendChild(div);
 
   palletForm.reset();
