@@ -1,7 +1,9 @@
 // global variables
-const trailerForm = document.querySelector(".truck-size");
+const trailerForm = document.querySelector("#trailer-form");
 const trailerSelected = document.querySelector("#truck-size");
 const trailerSlots = document.querySelector(".trailer-slots");
+const palletForm = document.querySelector("#pallet-form");
+const palletArea = document.querySelector(".pallet-area");
 
 const trailers = {
   "53ft": { rows: 2, columns: 13, maxWeight: 19958 },
@@ -29,5 +31,18 @@ function makeTrailer(e) {
   trailerSlots.style.gridTemplateColumns = `repeat(${trailerSpecs.columns}, 1fr)`;
 }
 
+function makePallet(e) {
+  e.preventDefault();
+  const palletSpecs = Object.fromEntries(new FormData(e.target));
+
+  const div = document.createElement("div");
+  div.textContent = `Pallet ID: ${palletSpecs.id}\nWeight: ${palletSpecs.weight} kg\nStop Number: ${palletSpecs.stop}`;
+  div.classList.add("pallet");
+  palletArea.appendChild(div);
+
+  palletForm.reset();
+}
+
 // event listeners
 trailerForm.addEventListener("submit", makeTrailer);
+palletForm.addEventListener("submit", makePallet);

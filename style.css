@@ -181,6 +181,10 @@ button:hover {
   display: grid;
 }
 
+.pallet {
+  white-space: pre-line;
+}
+
 .trailer-area {
   width: 100%;
   padding: 0 2rem;

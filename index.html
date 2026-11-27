@@ -71,7 +71,7 @@
           <!-- Form area -->
           <section class="form-area">
             <h2>Plan Your Trailer Load</h2>
-            <form class="truck-size">
+            <form id="trailer-form">
               <label for="truck-size">Choose a trailer size</label>
               <select name="truck-size" id="truck-size" required>
                 <option value="">--Please choose an option--</option>
@@ -91,6 +91,7 @@
                   type="number"
                   id="pallet-id"
                   placeholder="e.g. 4521"
+                  name="id"
                   required
                 />
 
@@ -99,6 +100,7 @@
                   type="number"
                   id="pallet-weight"
                   placeholder="e.g. 105"
+                  name="weight"
                   required
                 />
 
@@ -107,6 +109,7 @@
                   type="number"
                   id="pallet-stop-number"
                   placeholder="e.g. 3"
+                  name="stop"
                   required
                 />
                 <button type="submit">Add Pallet</button>
