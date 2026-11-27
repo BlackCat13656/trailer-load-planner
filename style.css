@@ -179,10 +179,34 @@ button:hover {
 
 .pallet-area {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 1rem 3rem;
+  gap: 1.2rem;
 }
 
 .pallet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   white-space: pre-line;
+
+  background-color: var(--background-color);
+  color: var(--headings-color);
+  border: 0.2rem solid var(--headings-color);
+  border-radius: 0.7rem;
+  box-shadow: 0.3rem 0.3rem 0.8rem 0 #0b3c5d33;
+
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.8rem;
+  cursor: grab;
+  transition: all 0.3s;
+}
+
+.pallet:hover {
+  transform: scale(1.05);
+  box-shadow: none;
 }
 
 .trailer-area {

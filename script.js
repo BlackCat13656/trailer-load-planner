@@ -4,6 +4,7 @@ const trailerSelected = document.querySelector("#truck-size");
 const trailerSlots = document.querySelector(".trailer-slots");
 const palletForm = document.querySelector("#pallet-form");
 const palletArea = document.querySelector(".pallet-area");
+let counter = 0;
 
 const trailers = {
   "53ft": { rows: 2, columns: 13, maxWeight: 19958 },
@@ -33,10 +34,13 @@ function makeTrailer(e) {
 
 function makePallet(e) {
   e.preventDefault();
+
+  counter++;
+
   const palletSpecs = Object.fromEntries(new FormData(e.target));
 
   const div = document.createElement("div");
-  div.textContent = `Pallet ID: ${palletSpecs.id}\nWeight: ${palletSpecs.weight} kg\nStop Number: ${palletSpecs.stop}`;
+  div.textContent = `PLT: ${counter}\n#${palletSpecs.id}\n${palletSpecs.weight} kg\nStop ${palletSpecs.stop}`;
   div.classList.add("pallet");
   palletArea.appendChild(div);
 
